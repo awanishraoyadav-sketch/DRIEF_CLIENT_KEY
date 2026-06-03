@@ -1,0 +1,64 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>DRIP CLIENT</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="bg"></div>
+
+<div class="container">
+
+<h1 class="logo">DRIP CLIENT</h1>
+<p class="sub">Engineered For Premium Access</p>
+
+<div class="card">
+
+<h2>Select Plan</h2>
+
+<select id="plan" onchange="changePrice()">
+<option value="59">1-DAY - ₹59</option>
+<option value="149">7-DAY - ₹149</option>
+<option value="299">1-MONTH - ₹299</option>
+</select>
+
+<div class="price" id="price">₹59</div>
+
+<img class="qr" src="https://api.qrserver.com/v1/create-qr-code/?size=300x300&data=upi://pay?pa=akarsh99@fam&pn=DRIPCLIENT&cu=INR">
+
+<p class="upi">UPI ID: akarsh99@fam</p>
+
+<input type="text" id="utr" placeholder="Enter UTR Number">
+
+<button onclick="verifyUTR()">VERIFY UTR</button>
+
+<div id="success" class="hidden">
+<h3>Verified Successfully</h3>
+<button onclick="generateKey()">GENERATE KEY</button>
+</div>
+
+<div id="keyBox" class="hidden">
+<div id="key"></div>
+<button onclick="copyKey()">COPY KEY</button>
+
+<a href="https://www.mediafire.com/" target="_blank">
+<button>DOWNLOAD CLIENT</button>
+</a>
+</div>
+
+</div>
+
+<div class="stats">
+<h2 id="players">2034</h2>
+<p>Live Players</p>
+</div>
+
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
